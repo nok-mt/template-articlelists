@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=PT+Sans:wght@400;700&display=swap");
+@import "var";
+@import "mixin";
+@import "common";
+@import "header";
+@import "header";
+@import "main";
+@import "title";
+@import "sideMenu";
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 0 auto;
+  @include lg {
+    width: 88%;
+  }
+}
+
+.link {
+  width: 30%;
+  margin-right: 5%;
+  margin-bottom: 40px;
+  transition: $transitionAll;
+  &:hover {
+    opacity: 0.6;
+  }
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+  @include xl {
+    width: 47.5%;
+    &:nth-child(3n) {
+      margin-right: 5%;
+    }
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+  @include sm {
+    width: 100%;
+    margin-right: 0;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  &__image {
+    width: 100%;
+    margin-bottom: 12px;
+    aspect-ratio: 16 / 9;
+    background-color: $color-dummy;
+  }
+  strong {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+  p {
+    line-height: 1.5;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.cv-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  background-color: #333333;
+  color: #ffffff;
+  border-radius: 100px;
+  transition: $transitionAll;
+  &:hover {
+    background-color: #666666;
+  }
+  @include lg {
+    width: 100px;
+    height: 100px;
+  }
+}

@@ -40,6 +40,31 @@ a {
   font-weight: 700;
 }
 
+.header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 96%;
+  height: 60px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1023px) {
+  .header {
+    width: 88%;
+  }
+}
+
+.header__logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
 .main {
   display: -webkit-box;
   display: -webkit-flex;
