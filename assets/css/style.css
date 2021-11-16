@@ -104,9 +104,13 @@ a {
           align-items: center;
   list-style: none;
   cursor: pointer;
-  line-height: 2.5;
+  margin-bottom: 0.5em;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+}
+
+.sideMenu li:last-child {
+  margin-bottom: 0;
 }
 
 .sideMenu li::before {
@@ -144,17 +148,31 @@ a {
     padding: 0;
     border-radius: 0;
   }
+  .sideMenu ul {
+    height: 60px;
+  }
   .sideMenu ul li {
     display: inline-block;
-    width: 16%;
-    height: 60px;
-    padding: 0 20px;
+    width: 130px;
+    height: 100%;
+    margin-bottom: 0;
     text-align: center;
-    line-height: 60px;
-    border-right: 1px solid #bbbbbb;
+    border-right: 1px solid #666666;
   }
   .sideMenu ul li:last-child {
     border-right: none;
+  }
+  .sideMenu ul li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 60px;
   }
 }
 

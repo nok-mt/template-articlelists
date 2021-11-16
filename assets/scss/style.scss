@@ -102,8 +102,11 @@ a {
     align-items: center;
     list-style: none;
     cursor: pointer;
-    line-height: 2.5;
+    margin-bottom: 0.5em;
     transition: $transitionAll;
+    &:last-child {
+      margin-bottom: 0;
+    }
     &::before {
       content: "";
       display: inline-block;
@@ -132,16 +135,22 @@ a {
     padding: 0;
     border-radius: 0;
     ul {
+      height: 60px;
       li {
         display: inline-block;
-        width: 16%;
-        height: 60px;
-        padding: 0 20px;
+        width: 130px;
+        height: 100%;
+        margin-bottom: 0;
         text-align: center;
-        line-height: 60px;
-        border-right: 1px solid #bbbbbb;
+        border-right: 1px solid #666666;
         &:last-child {
           border-right: none;
+        }
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 60px;
         }
       }
     }
